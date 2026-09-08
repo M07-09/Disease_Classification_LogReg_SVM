@@ -114,6 +114,19 @@ python disease_classification.py
 The script prints the full analysis to the console and writes six charts
 into `outputs/`.
 
+### Interactive dashboard
+
+```bash
+streamlit run dashboard.py
+```
+
+Opens a Streamlit dashboard with one page per assignment part (dataset
+exploration, preprocessing, model development, new-patient prediction,
+visualization, comparison and discussion). It trains both models live,
+explains every table and chart in plain language for readers with no AI
+background, and lets you enter a new patient's 30 measurements to get a
+Healthy (0) / Diseased (1) prediction from both models.
+
 **Requirements:** Python 3.8+ — see [`requirements.txt`](requirements.txt).
 
 ---
@@ -138,6 +151,8 @@ into `outputs/`.
 ```
 Disease_Classification_LogReg_SVM/
 ├── disease_classification.py       # full pipeline
+├── dashboard.py                    # interactive Streamlit dashboard
+├── .streamlit/config.toml          # dashboard theme
 ├── breast_cancer_dataset.csv.xlsx  # Breast Cancer Wisconsin (Diagnostic)
 ├── requirements.txt
 ├── outputs/                        # generated charts
